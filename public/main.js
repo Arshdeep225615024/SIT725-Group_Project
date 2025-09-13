@@ -49,11 +49,11 @@ checkBtn.addEventListener("click", async () => {
   }
 
   try {
-    const res = await fetch("/check-breach", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password: pwd }),
-    });
+    const res = await fetch("/api/check-breach", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: pwd }),
+      });
     const data = await res.json();
 
     if (data.breached) {
