@@ -68,3 +68,38 @@ checkBtn.addEventListener("click", async () => {
     breachResult.style.color = "orange";
   }
 });
+
+// Strong password generator
+function generateStrongPassword(length = 12) {
+    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lower = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*()_+{}[]<>?";
+  
+    const allChars = upper + lower + numbers + symbols;
+  
+    let password = "";
+    password += upper[Math.floor(Math.random() * upper.length)];
+    password += lower[Math.floor(Math.random() * lower.length)];
+    password += numbers[Math.floor(Math.random() * numbers.length)];
+    password += symbols[Math.floor(Math.random() * symbols.length)];
+  
+    // fill remaining chars
+    for (let i = 4; i < length; i++) {
+      password += allChars[Math.floor(Math.random() * allChars.length)];
+    }
+  
+    // shuffle to avoid predictable order
+    password = password.split("").sort(() => 0.5 - Math.random()).join("");
+    return password;
+  }
+  
+  const suggestBtn = document.getElementById("suggestBtn");
+  const suggestionDiv = document.getElementById("suggestion");
+  
+  suggestBtn.addEventListener("click", () => {
+    const strongPwd = generateStrongPassword(14);
+    suggestionDiv.textContent = `🔑 Suggested password: ${strongPwd}`;
+    suggestionDiv.style.color = "blue";
+  });
+  
