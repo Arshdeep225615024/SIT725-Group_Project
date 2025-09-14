@@ -27,7 +27,9 @@ body {
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
+    margin:5px;
   }
+  
   
   button {
     padding: 10px 15px;
@@ -71,3 +73,11 @@ body {
     font-weight: bold;
   }
   
+  #appName{
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    margin:5px;
+    border-radius: 6px;
+  }
