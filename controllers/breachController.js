@@ -38,4 +38,4 @@ const checkBreach = async (req, res) => {
   }
 };
 
-module.exports = { checkBreach };
+module.exports = { checkBreach }; 

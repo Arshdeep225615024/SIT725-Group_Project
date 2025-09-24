@@ -41,4 +41,3 @@ describe("Breach Controller", () => {
     expect(output.count).to.equal(0);
   });
 });
-

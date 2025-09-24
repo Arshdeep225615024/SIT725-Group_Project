@@ -17,4 +17,3 @@ const checkStrength = (req, res) => {
   };
   
   module.exports = { checkStrength };
-  

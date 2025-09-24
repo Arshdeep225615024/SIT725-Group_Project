@@ -1,28 +1,28 @@
 {
-  "name": "sit725-group_project",
+  "name": "securepasswordmanager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js --timeout 5000"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arshdeep225615024/SIT725-Group_Project.git"
+    "url": "git+https://github.com/Arshdeep225615024/SecurePasswordManager.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Arshdeep225615024/SIT725-Group_Project/issues"
+    "url": "https://github.com/Arshdeep225615024/SecurePasswordManager/issues"
   },
-  "homepage": "https://github.com/Arshdeep225615024/SIT725-Group_Project#readme",
+  "homepage": "https://github.com/Arshdeep225615024/SecurePasswordManager#readme",
   "dependencies": {
     "axios": "^1.12.1",
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
-    "ejs": "^3.1.10",
+    "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "mongoose": "^8.18.1"
   },
