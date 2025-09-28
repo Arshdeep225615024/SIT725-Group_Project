@@ -8,15 +8,15 @@ const checkBreach = async (req, res) => {
       return res.status(400).json({ error: "Password is required" });
     }
 
-    
+    // Step 1: SHA1 hash of password
     const hash = crypto.createHash("sha1").update(password).digest("hex").toUpperCase();
     const prefix = hash.substring(0, 5);
     const suffix = hash.substring(5);
 
-    
+    // Step 2: Call HaveIBeenPwned API
     const response = await axios.get(`https://api.pwnedpasswords.com/range/${prefix}`);
 
-   
+    // Step 3: Check if suffix exists
     const lines = response.data.split("\n");
     let count = 0;
     for (let line of lines) {

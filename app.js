@@ -5,6 +5,10 @@ require("dotenv").config();
 
 const breachRoutes = require("./routes/breachRoutes");
 const strengthRoutes = require("./routes/strengthRoutes");
+const passwordRoutes = require("./routes/passwordRoutes");
+
+
+
 
 const app = express();
 
@@ -18,11 +22,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", breachRoutes);
 app.use("/api", strengthRoutes);
+app.use("/api", passwordRoutes);
 
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
+
+app.get("/signup", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "signup.html"));
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

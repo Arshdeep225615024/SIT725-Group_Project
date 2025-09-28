@@ -85,11 +85,11 @@ npx mocha tests/unitTests/strengthController.test.js --exit
 
 link- https://excalidraw.com/#json=K9actp4xYhnBcFzWj5b-6,kzARM2Mc02vVYHN-mhEykw
 
+## 📸 Screenshots
+- **Password Strength Meter & Breach Check Result** – proof of MVP features  
+  https://docs.google.com/document/d/1MTP9gStHryZ1Cfq1Wiq7aW1lUZygbUZX1QuonFiC0/edit?usp=sharing
 
-7.References
-
-HaveIBeenPwned API
-
-Socket.io Documentation
-
-MongoDB Docs
+## 📚 References
+- [HaveIBeenPwned API](https://haveibeenpwned.com/API/v3)
+- [Socket.io Documentation](https://socket.io/docs/v4/)
+- [MongoDB Docs](https://www.mongodb.com/docs/)
